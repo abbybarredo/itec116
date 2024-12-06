@@ -1,0 +1,498 @@
+PS C:\xampp\htdocs\barredo> git -v
+git version 2.47.1.windows.1
+PS C:\xampp\htdocs\barredo> git -v
+git version 2.47.1.windows.1
+PS C:\xampp\htdocs\barredo> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\xampp\htdocs\barredo> git init
+Initialized empty Git repository in C:/xampp/htdocs/barredo/.git/
+PS C:\xampp\htdocs\barredo> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        joke.html
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git add register.php
+PS C:\xampp\htdocs\barredo> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   register.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        joke.html
+        joke.js
+        script.js
+        style.css
+        testing.js
+        try.php
+
+PS C:\xampp\htdocs\barredo> git add *=all
+fatal: pathspec '*=all' did not match any files
+PS C:\xampp\htdocs\barredo> git add * = all
+fatal: pathspec '=' did not match any files
+PS C:\xampp\htdocs\barredo> git add *
+PS C:\xampp\htdocs\barredo> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   joke.html
+        new file:   joke.js
+        new file:   register.php
+        new file:   script.js
+        new file:   style.css
+        new file:   testing.js
+        new file:   try.php
+
+PS C:\xampp\htdocs\barredo> git reset
+PS C:\xampp\htdocs\barredo> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        joke.html
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git add .
+PS C:\xampp\htdocs\barredo> git sttaus
+git: 'sttaus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+PS C:\xampp\htdocs\barredo> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   joke.html
+        new file:   joke.js
+        new file:   register.php
+        new file:   script.js
+        new file:   style.css
+        new file:   testing.js
+        new file:   try.php
+
+PS C:\xampp\htdocs\barredo> git reset     
+PS C:\xampp\htdocs\barredo> git add index.php
+fatal: pathspec 'index.php' did not match any files
+PS C:\xampp\htdocs\barredo> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        joke.html
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git add index.html
+PS C:\xampp\htdocs\barredo> git commit -m "add this register page using commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'CCL@CCL305-PC15.(none)')
+PS C:\xampp\htdocs\barredo> git config --global user.email "barredoabby04@gmail.com"
+PS C:\xampp\htdocs\barredo> git config --global user.name  "abbybarredo"            
+PS C:\xampp\htdocs\barredo> git config user.email
+barredoabby04@gmail.com
+PS C:\xampp\htdocs\barredo> git config user.name 
+abbybarredo
+PS C:\xampp\htdocs\barredo> git commit -m "add this register page using commit"     
+[master (root-commit) f3e8446] add this register page using commit
+ 1 file changed, 59 insertions(+)
+ create mode 100644 index.html
+PS C:\xampp\htdocs\barredo> git remote add origin https://github.com/abbybarredo/itec116.git
+PS C:\xampp\htdocs\barredo> git branch -M main  
+PS C:\xampp\htdocs\barredo> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 913 bytes | 913.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/abbybarredo/itec116.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\xampp\htdocs\barredo> git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+PS C:\xampp\htdocs\barredo> git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+PS C:\xampp\htdocs\barredo> git add joke.html 
+PS C:\xampp\htdocs\barredo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   joke.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+PS C:\xampp\htdocs\barredo> git reset
+PS C:\xampp\htdocs\barredo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git branch
+* main
+PS C:\xampp\htdocs\barredo> git branch assets/css   
+PS C:\xampp\htdocs\barredo> git barnhc
+git: 'barnhc' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+PS C:\xampp\htdocs\barredo> git branch
+  assets/css
+* main
+PS C:\xampp\htdocs\barredo> git checkout assets/css
+Switched to branch 'assets/css'
+PS C:\xampp\htdocs\barredo> git status
+On branch assets/css
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git branch
+* assets/css
+  main
+PS C:\xampp\htdocs\barredo> git status
+On branch assets/css
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        style.css
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git add style.css
+PS C:\xampp\htdocs\barredo> git commit -m "added the style.css"
+[assets/css 64bbabb] added the style.css
+ 1 file changed, 47 insertions(+)
+ create mode 100644 style.css
+PS C:\xampp\htdocs\barredo> git status
+On branch assets/css
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git push origin assets/css
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 594 bytes | 594.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'assets/css' on GitHub by visiting:
+remote:      https://github.com/abbybarredo/itec116/pull/new/assets/css
+remote:
+To https://github.com/abbybarredo/itec116.git
+ * [new branch]      assets/css -> assets/css
+PS C:\xampp\htdocs\barredo> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\xampp\htdocs\barredo> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 900 bytes | 900.00 KiB/s, done.
+From https://github.com/abbybarredo/itec116
+   f3e8446..0ae21ff  main       -> origin/main
+Updating f3e8446..0ae21ff
+Fast-forward
+ style.css | 47 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 47 insertions(+)
+ create mode 100644 style.css
+PS C:\xampp\htdocs\barredo> git pull origin main
+From https://github.com/abbybarredo/itec116
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\xampp\htdocs\barredo> git checkout assets/css
+Switched to branch 'assets/css'
+PS C:\xampp\htdocs\barredo> git branch
+* assets/css
+  main
+PS C:\xampp\htdocs\barredo> git status
+On branch assets/css
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git checkout git/commandtext
+error: pathspec 'git/commandtext' did not match any file(s) known to git
+PS C:\xampp\htdocs\barredo> git branch git/commandtext
+PS C:\xampp\htdocs\barredo> git status
+On branch assets/css
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git command.txt
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git branch
+* assets/css
+  git/commandtext
+  main
+PS C:\xampp\htdocs\barredo> git branch git/commandtext
+fatal: a branch named 'git/commandtext' already exists
+PS C:\xampp\htdocs\barredo> git checkout git/commandtext
+Switched to branch 'git/commandtext'
+PS C:\xampp\htdocs\barredo> git status                  
+On branch git/commandtext
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git command.txt
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git branch                  
+  assets/css
+* git/commandtext
+  main
+PS C:\xampp\htdocs\barredo> git add gitcommand.txt
+fatal: pathspec 'gitcommand.txt' did not match any files
+PS C:\xampp\htdocs\barredo> git add git command.txt
+fatal: pathspec 'git' did not match any files
+PS C:\xampp\htdocs\barredo> git add gitcommand.txt 
+PS C:\xampp\htdocs\barredo> git status
+On branch git/commandtext
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   gitcommand.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+PS C:\xampp\htdocs\barredo> git commit -m "add command of git"
+[git/commandtext ad39baa] add command of git
+ 1 file changed, 313 insertions(+)
+ create mode 100644 gitcommand.txt
+PS C:\xampp\htdocs\barredo> git push origin git/commandtxt
+error: src refspec git/commandtxt does not match any
+error: failed to push some refs to 'https://github.com/abbybarredo/itec116.git'
+PS C:\xampp\htdocs\barredo> git push origin git/commandtxt
+error: src refspec git/commandtxt does not match any
+error: failed to push some refs to 'https://github.com/abbybarredo/itec116.git'
+PS C:\xampp\htdocs\barredo> git status  
+On branch git/commandtext
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git branch
+  assets/css
+* git/commandtext
+  main
+PS C:\xampp\htdocs\barredo> git add gitcommand.txt
+PS C:\xampp\htdocs\barredo> git status
+On branch git/commandtext
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git status
+On branch git/commandtext
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    gitcommand.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitcommand.html
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\xampp\htdocs\barredo> git add gitcommand.html
+PS C:\xampp\htdocs\barredo> git status
+On branch git/commandtext
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   gitcommand.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    gitcommand.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+PS C:\xampp\htdocs\barredo> git commit -m "add command of git"
+[git/commandtext b8d4834] add command of git
+ 1 file changed, 313 insertions(+)
+ create mode 100644 gitcommand.html
+PS C:\xampp\htdocs\barredo> git push origin git/commandtxt
+error: src refspec git/commandtxt does not match any
+error: failed to push some refs to 'https://github.com/abbybarredo/itec116.git'
+PS C:\xampp\htdocs\barredo> git branch
+  assets/css
+* git/commandtext
+  main
+PS C:\xampp\htdocs\barredo> git branch main
+fatal: a branch named 'main' already exists
+PS C:\xampp\htdocs\barredo> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\xampp\htdocs\barredo> git push origin git/commandtxt    
+error: src refspec git/commandtxt does not match any
+error: failed to push some refs to 'https://github.com/abbybarredo/itec116.git'
+PS C:\xampp\htdocs\barredo> git branch
+  assets/css
+  git/commandtext
+* main
+PS C:\xampp\htdocs\barredo> gut status
+gut : The term 'gut' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and 
+try again.
+At line:1 char:1
++ gut status
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gut:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\xampp\htdocs\barredo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        joke.html
+        joke.js
+        register.php
+        script.js
+        testing.js
+        try.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\xampp\htdocs\barredo> git  
